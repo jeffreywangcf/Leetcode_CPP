@@ -4,6 +4,8 @@
 #include "solutions/ArraySolution.h"
 
 int main() {
-    std::cout << "test" << std::endl;
+    vector<string> testcase = {"bella","label","roller"};
+    vector<string> ret = ArraySolution::commonChars(testcase);
+    Util::printVector(ret);
     return 0;
 }

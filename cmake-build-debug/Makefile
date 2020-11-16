@@ -197,33 +197,6 @@ structures/List.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/leetcode_cpp.dir/build.make CMakeFiles/leetcode_cpp.dir/structures/List.cpp.s
 .PHONY : structures/List.cpp.s
 
-util.o: util.cpp.o
-
-.PHONY : util.o
-
-# target to build an object file
-util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leetcode_cpp.dir/build.make CMakeFiles/leetcode_cpp.dir/util.cpp.o
-.PHONY : util.cpp.o
-
-util.i: util.cpp.i
-
-.PHONY : util.i
-
-# target to preprocess a source file
-util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leetcode_cpp.dir/build.make CMakeFiles/leetcode_cpp.dir/util.cpp.i
-.PHONY : util.cpp.i
-
-util.s: util.cpp.s
-
-.PHONY : util.s
-
-# target to generate assembly for a file
-util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/leetcode_cpp.dir/build.make CMakeFiles/leetcode_cpp.dir/util.cpp.s
-.PHONY : util.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -239,9 +212,6 @@ help:
 	@echo "... structures/List.o"
 	@echo "... structures/List.i"
 	@echo "... structures/List.s"
-	@echo "... util.o"
-	@echo "... util.i"
-	@echo "... util.s"
 .PHONY : help
 
 

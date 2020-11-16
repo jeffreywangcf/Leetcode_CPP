@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/jefferywangcf/CLionProjects/leetcode_cpp/main.cpp" "/Users/jefferywangcf/CLionProjects/leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/main.cpp.o"
   "/Users/jefferywangcf/CLionProjects/leetcode_cpp/structures/List.cpp" "/Users/jefferywangcf/CLionProjects/leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o"
-  "/Users/jefferywangcf/CLionProjects/leetcode_cpp/util.cpp" "/Users/jefferywangcf/CLionProjects/leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

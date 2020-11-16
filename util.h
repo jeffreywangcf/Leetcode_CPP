@@ -11,6 +11,8 @@
 // Created by Jeffery Wang on 11/16/20.
 //
 
+#pragma once
+
 #ifndef LEETCODE_CPP_UTIL_H
 #define LEETCODE_CPP_UTIL_H
 
@@ -21,7 +23,12 @@ using namespace std;
 
 namespace Util{
     template<class T>
-    void printVector(vector<T> v);
+    void printVector(vector<T> &v){
+        cout << "{ ";
+        for(auto &item: v)
+            cout << item << ", ";
+        cout << "}" << endl;
+    }
 }
 
 #endif //LEETCODE_CPP_UTIL_H

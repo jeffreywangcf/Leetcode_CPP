@@ -16,6 +16,7 @@
 #include <algorithm>
 #include <unordered_set>
 #include <map>
+#include <queue>
 
 using namespace std;
 
@@ -148,6 +149,57 @@ namespace ArraySolution {
         }
         for(auto i = table.begin(); i != table.end() && k-- > 0; i++)
             ret.push_back(i->second);
+        return ret;
+    }
+
+    double average(vector<int>& salary) {
+        int sum = 0, min = salary[0], max = salary[0];
+        for(auto s: salary){
+            sum += s;
+            if(s > max)
+                max = s;
+            if(s < min)
+                min = s;
+        }
+        return (sum - min - max) / (double) (salary.size() - 2);
+    }
+
+    vector<string> commonChars(vector<string>& A) {
+        int freq[A.size()][26];
+        memset(&freq[0][0], 0, sizeof(freq));
+        auto ret = vector<string>();
+        for(int i = 0; i < A.size(); i++)
+            for(auto a: A[i])
+                freq[i][a - 'a']++;
+        for(int c = 0; c < 26; c++){
+            int min_freq = 100;
+            for(int i = 0; i < A.size(); i++)
+                if(freq[i][c] < min_freq)
+                    min_freq = freq[i][c];
+            int index = 0;
+            while(index++ < min_freq)
+                ret.push_back(string(1, c + 'a'));
+        }
+        return ret;
+    }
+
+    vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
+        auto loc = vector<int>(), ret = vector<int>();
+        auto pq = priority_queue<int, vector<int>, greater<>>();
+        for(auto a: arr1){
+            auto it = find(arr2.begin(), arr2.end(), a);
+            if(it == arr2.end())
+                pq.push(a);
+            else
+                loc.push_back(it - arr2.begin());
+        }
+        sort(loc.begin(), loc.end());
+        for(auto i: loc)
+            ret.push_back(arr2[i]);
+        while(!pq.empty()){
+            ret.push_back(pq.top());
+            pq.pop();
+        }
         return ret;
     }
 

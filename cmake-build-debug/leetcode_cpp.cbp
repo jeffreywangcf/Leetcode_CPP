@@ -95,9 +95,6 @@
 		<Unit filename="/Users/jefferywangcf/CLionProjects/leetcode_cpp/structures/List.h">
 			<Option target="leetcode_cpp"/>
 		</Unit>
-		<Unit filename="/Users/jefferywangcf/CLionProjects/leetcode_cpp/util.cpp">
-			<Option target="leetcode_cpp"/>
-		</Unit>
 		<Unit filename="/Users/jefferywangcf/CLionProjects/leetcode_cpp/util.h">
 			<Option target="leetcode_cpp"/>
 		</Unit>

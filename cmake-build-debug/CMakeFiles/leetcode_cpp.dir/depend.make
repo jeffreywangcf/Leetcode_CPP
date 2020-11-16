@@ -9,6 +9,3 @@ CMakeFiles/leetcode_cpp.dir/main.cpp.o: ../util.h
 CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o: ../structures/List.cpp
 CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o: ../structures/List.h
 
-CMakeFiles/leetcode_cpp.dir/util.cpp.o: ../util.cpp
-CMakeFiles/leetcode_cpp.dir/util.cpp.o: ../util.h
-
