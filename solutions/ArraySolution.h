@@ -288,6 +288,34 @@ namespace ArraySolution {
             ret.insert(ret.end(), f.first, -f.second);
         return ret;
     }
+
+    bool threeConsecutiveOdds(vector<int>& arr) {
+        int count = 0;
+        for(auto a: arr){
+            if(a % 2 == 1)
+                count++;
+            else
+                count = 0;
+            if(count >= 3)
+                return true;
+        }
+        return false;
+    }
+
+    int fixedPoint(vector<int>& A) {
+        for(int i = 0; i < A.size(); i++)
+            if(i == A[i])
+                return i;
+        return -1;
+    }
+
+    bool isToeplitzMatrix(vector<vector<int>>& matrix) {
+        for(int i = 0; i < matrix.size() - 1; i++)
+            for(int j = 0; j < matrix[0].size() - 1; j++)
+                if(matrix[i][j] != matrix[i + 1][j + 1])
+                    return false;
+        return true;
+    }
 };
 
 
