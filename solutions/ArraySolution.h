@@ -247,7 +247,47 @@ namespace ArraySolution {
         return i;
     }
 
-    
+    vector<vector<int>> minimumAbsDifference(vector<int>& arr) {
+        sort(arr.begin(), arr.end());
+        auto ret = vector<vector<int>>();
+        int min_dis = INT_MAX;
+        for(int i = 1; i < arr.size(); i++){
+            int dis = arr[i] - arr[i - 1];
+            if(dis < min_dis){
+                min_dis = dis;
+                ret.clear();
+                ret.push_back({arr[i - 1], arr[i]});
+            }else if(dis == min_dis){
+                ret.push_back({arr[i - 1], arr[i]});
+            }
+        }
+        return ret;
+    }
+
+    double trimMean(vector<int>& arr) {
+        sort(arr.begin(), arr.end());
+        int to_remove = (int) (arr.size() * 0.05);
+        int sum = 0;
+        for(int i = to_remove; i < arr.size() - to_remove; i++)
+            sum += arr[i];
+        return (double) sum / (double) (arr.size() - to_remove * 2);
+    }
+
+    vector<int> frequencySort(vector<int>& nums) {
+        auto table = map<int, int>();
+        auto ret = vector<int>();
+        for(auto num: nums)
+            table[num]++;
+        auto freq = vector<pair<int, int>>();
+        for(auto p: table)
+            freq.push_back({p.second, -p.first}); //negative sign for decreasing
+        sort(freq.begin(), freq.end());
+        for(auto f: freq)
+            cout << f.first << " " << f.second << endl;
+        for(auto f: freq)
+            ret.insert(ret.end(), f.first, -f.second);
+        return ret;
+    }
 };
 
 
