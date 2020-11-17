@@ -16,6 +16,7 @@
 #include <algorithm>
 #include <unordered_set>
 #include <map>
+#include <unordered_map>
 #include <queue>
 
 using namespace std;
@@ -203,6 +204,50 @@ namespace ArraySolution {
         return ret;
     }
 
+    int countCharacters(vector<string>& words, string chars) {
+        int ret = 0;
+        auto table = unordered_map<char, int>();
+        for(auto c: chars)
+            table[c]++;
+        for(const auto& word: words){
+            bool flag = true;
+            auto cp_table = unordered_map<char, int>();
+            for(auto c: word)
+                cp_table[c]++;
+            for(auto c: word){
+                if(table[c] < cp_table[c]){
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag)
+                ret += word.size();
+        }
+        return ret;
+    }
+
+    int fib(int N) {
+        if(N < 2){
+            return N;
+        }
+        int a = 0, b = 1, sum = 1;
+        while(N-- > 2){
+            a = b;
+            b = sum;
+            sum = a + b;
+        }
+        return sum;
+    }
+
+    int largestUniqueNumber(vector<int>& A) {
+        int table[1001] = {}, i = -1;
+        for(auto a: A)
+            table[a]++;
+        for(i = 1000; i >= 0 && table[i] != 1; i--);
+        return i;
+    }
+
+    
 };
 
 
