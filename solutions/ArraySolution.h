@@ -316,6 +316,47 @@ namespace ArraySolution {
                     return false;
         return true;
     }
+
+    int findLucky(vector<int>& arr) {
+       int table[501] = {0};
+       for(auto a: arr)
+           table[a]++;
+       auto max = -1;
+       for(int i = 1; i < 501; i++)
+           if(table[i] == i && i > max)
+               max = i;
+       return max;
+    }
+
+    int minStartValue(vector<int>& nums) {
+        auto sum = 0, min_sum = 0;
+        for(auto num: nums){
+            sum += num;
+            min_sum = min(min_sum, sum);
+        }
+        return 1 - min_sum;
+    }
+
+    int numSpecial(vector<vector<int>>& mat) {
+        int row_sum[mat.size()];
+        int col_sum[mat[0].size()];
+        for(int i = 0; i < mat.size(); i++){
+            row_sum[i] = 0;
+            for(auto num: mat[i])
+                row_sum[i] += num;
+        }
+        for(int i = 0; i < mat[0].size(); i++){
+            col_sum[i] = 0;
+            for(int j = 0; j < mat.size(); j++)
+                col_sum[i] += mat[j][i];
+        }
+        int ret = 0;
+        for(int i = 0; i < mat.size(); i++)
+            for(int j = 0; j < mat[0].size(); j++)
+                if(mat[i][j] == 1 && row_sum[i] == 1 && col_sum[j] == 1)
+                    ret++;
+        return ret;
+    }
 };
 
 
