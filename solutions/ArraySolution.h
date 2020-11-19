@@ -393,6 +393,51 @@ namespace ArraySolution {
                     max = A[i] + A[j];
         return max;
     }
+
+    vector<int> sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& queries) {
+        auto ret = vector<int>();
+        int sum = 0;
+        for(auto a: A)
+            if(a % 2 == 0)
+                sum += a;
+        for(auto query: queries){
+            int before = A[query[1]];
+            if(before % 2 == 0)
+                sum -= before;
+            A[query[1]] += query[0];
+            if(A[query[1]] % 2 == 0)
+                sum += A[query[1]];
+            ret.push_back(sum);
+        }
+        return ret;
+    }
+
+    vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c) {
+        const int y = nums.size();
+        const int x = nums[0].size();
+        if((y == r && x == c) || (y * x != r * c))
+            return nums;
+        vector<vector<int>> ret(r, vector<int>(c, 0));
+        for(int i = 0; i <x * y; i++)
+            ret[i / c][i % c] = nums[i / x][i % x];
+        return ret;
+    }
+
+    char slowestKey(vector<int>& releaseTimes, string keysPressed) {
+        int max_time = releaseTimes[0];
+        char max_key = keysPressed[0];
+        for(int i = 1; i < releaseTimes.size(); i++){
+            auto t = releaseTimes[i] - releaseTimes[i - 1];
+            if(t > max_time){
+                max_key = keysPressed[i];
+                max_time = t;
+            }else if(t == max_time && keysPressed[i] > max_key){
+                max_key = keysPressed[i];
+                max_time = t;
+            }
+        }
+        return max_key;
+    }
 };
 
 
