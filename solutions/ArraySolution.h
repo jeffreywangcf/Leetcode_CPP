@@ -357,6 +357,42 @@ namespace ArraySolution {
                     ret++;
         return ret;
     }
+
+    int specialArray(vector<int>& nums) {
+        int table[1001] = {0};
+        for(auto num: nums)
+            table[num]++;
+        auto total = nums.size();
+        for(int i = 0; i < 1001; i++){
+            if(total == i)
+                return i;
+            total -= table[i];
+        }
+        return -1;
+    }
+
+    vector<vector<int>> shiftGrid(vector<vector<int>>& grid, int k) {
+        const int n_row = grid.size();
+        const int n_col = grid[0].size();
+        vector<vector<int>> ret(n_row, vector<int>(n_col, 0));
+        for(int i = 0; i < n_row; i++){
+            for(int j = 0; j < n_col; j++){
+                const int n_i = (i + (j + k) / n_col) % n_row;
+                const int n_j = (j + k) % n_col;
+                ret[n_i][n_j] = grid[i][j];
+            }
+        }
+        return ret;
+    }
+
+    int twoSumLessThanK(vector<int>& A, int K) {
+        int max = -1;
+        for(int i = 0; i < A.size() - 1; i++)
+            for(int j = i + 1; j < A.size(); j++)
+                if(A[i] + A[j] < K && A[i] + A[j] > max)
+                    max = A[i] + A[j];
+        return max;
+    }
 };
 
 
