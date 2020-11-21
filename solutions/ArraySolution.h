@@ -438,7 +438,60 @@ namespace ArraySolution {
         }
         return max_key;
     }
-};
+
+    int findSpecialInteger(vector<int>& arr) {
+        auto table = unordered_map<int, int>();
+        for(auto num: arr){
+            table[num]++;
+            if(table[num] > arr.size() / 2)
+                return num;
+        }
+        return -1;
+    }
+
+    int majorityElement(vector<int>& nums) {
+        //A Linear Time Majority Vote Algorithm
+        int ret = -1, count = 0;
+        for(auto num: nums){
+            if(count == 0){
+                ret = num;
+                count++;
+            }
+            else
+                num == ret ? count++ : count--;
+        }
+        return ret;
+    }
+
+    int getMaxFrequency(const string &str){
+        auto table = map<char, int>();
+        for(auto c: str)
+            table[c]++;
+        int max = -1;
+        for(auto pair: table){
+            if(pair.second > max)
+                max = pair.second;
+        }
+        return max;
+    }
+
+    vector<int> numSmallerByFrequency(vector<string>& queries, vector<string>& words) {
+        auto table = vector<int>(words.size());
+        auto ret = vector<int>();
+        for(int i = 0; i < words.size(); i++)
+            table[i] = getMaxFrequency(words[i]);
+        for(const auto &query: queries){
+            int target = getMaxFrequency(query);
+            int count = 0;
+            for(auto t: table)
+                if(t > target)
+                    count++;
+            ret.push_back(count);
+        }
+        return ret;
+    }
+
+}
 
 
 #endif //LEETCODE_CPP_ARRAYSOLUTION_H
