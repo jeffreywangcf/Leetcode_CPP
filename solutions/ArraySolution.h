@@ -18,6 +18,7 @@
 #include <map>
 #include <unordered_map>
 #include <queue>
+#include <numeric>
 
 using namespace std;
 
@@ -489,7 +490,41 @@ namespace ArraySolution {
         }
         return ret;
     }
-    
+
+    int countElements(vector<int>& arr) {
+        int table[1002] = {0};
+        int ret = 0;
+        for(auto a: arr)
+            table[a]++;
+        for(auto a: arr)
+            if(table[a + 1] != 0)
+                ret += 1;
+        return ret;
+    }
+
+    vector<int> fairCandySwap(vector<int>& A, vector<int>& B) {
+        // sum1 - x + y = sum2 + x - y
+        //2y = 2x + sum2 - sum1
+        //y = x + (sum2 - sum1)/2
+        int sum1 = accumulate(A.begin(), A.end(), 0);
+        int sum2 = accumulate(B.begin(), B.end(), 0);
+        unordered_set<int> table(B.begin(), B.end());
+        for(auto a: A){
+            int target = a + (sum2 - sum1) / 2;
+            if(table.find(target) != table.end())
+                return {a, target};
+        }
+        return {0, 0};
+    }
+
+    bool isMajorityElement(vector<int>& nums, int target) {
+        int count = 0, sz = nums.size();
+        for(const auto &num: nums)
+            if(num == target)
+                if(++count > (sz / 2))
+                    return true;
+        return false;
+    }
 }
 
 
