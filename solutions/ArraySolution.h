@@ -463,34 +463,33 @@ namespace ArraySolution {
         return ret;
     }
 
+    //helper function
     int getMaxFrequency(const string &str){
-        auto table = map<char, int>();
+        int table[26] = {0};
         for(auto c: str)
-            table[c]++;
-        int max = -1;
-        for(auto pair: table){
-            if(pair.second > max)
-                max = pair.second;
-        }
-        return max;
+            table[c - 'a']++;
+        for(int freq : table)
+            if(freq != 0)
+                return freq;
+        return 0;
     }
 
     vector<int> numSmallerByFrequency(vector<string>& queries, vector<string>& words) {
-        auto table = vector<int>(words.size());
+        auto table = map<int, int>();
         auto ret = vector<int>();
-        for(int i = 0; i < words.size(); i++)
-            table[i] = getMaxFrequency(words[i]);
+        for(auto &word : words)
+            table[getMaxFrequency(word)]++;
         for(const auto &query: queries){
             int target = getMaxFrequency(query);
             int count = 0;
-            for(auto t: table)
-                if(t > target)
-                    count++;
+            for(auto pair: table)
+                if(pair.first > target)
+                    count += pair.second;
             ret.push_back(count);
         }
         return ret;
     }
-
+    
 }
 
 
