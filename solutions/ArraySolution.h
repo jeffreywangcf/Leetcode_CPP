@@ -525,6 +525,38 @@ namespace ArraySolution {
                     return true;
         return false;
     }
+
+    bool isMonotonic(vector<int>& A) {
+        bool increasing = true, decreasing = true;
+        for(int i = 0; i < A.size() - 1; i++){
+            if(A[i + 1] > A[i])
+                decreasing = false;
+            if(A[i + 1] < A[i])
+                increasing = false;
+            if(!increasing && !decreasing)
+                return false;
+        }
+        return true;
+    }
+
+    int maxProfit(vector<int>& prices) {
+        int ret = 0;
+        for(int i = 0; i < prices.size() - 1; i++)
+            if(prices[i + 1] > prices[i])
+                ret += prices[i + 1] - prices[i];
+        return ret;
+    }
+
+    vector<int> arrayRankTransform(vector<int>& arr) {
+        auto table = unordered_map<int, int>();
+        set<int> sorted(arr.begin(), arr.end());
+        int rank = 1;
+        for(auto num: sorted)
+            table[num] = rank++;
+        for(auto &a: arr)
+            a = table[a];
+        return arr;
+    }
 }
 
 
