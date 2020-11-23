@@ -557,6 +557,69 @@ namespace ArraySolution {
             a = table[a];
         return arr;
     }
+
+    int distanceBetweenBusStops(vector<int>& distance, int start, int destination) {
+        int cw = 0, ccw = 0, cw_index = start, ccw_index = start;
+        while(cw_index != destination){
+            cw += distance[cw_index++];
+            if(cw_index == distance.size())
+                cw_index = 0;
+        }
+        while(ccw_index != destination){
+            if(ccw_index == 0)
+                ccw_index = distance.size();
+            ccw += distance[--ccw_index];
+        }
+        return min(cw, ccw);
+    }
+
+    int findShortestSubArray(vector<int>& nums) {
+        auto table = unordered_map<int, int>();
+        for(auto num: nums)
+            table[num]++;
+        auto max_pair = pair<int, int>(-1, -1);
+        for(auto p: table)
+            if(p.second > max_pair.second)
+                max_pair = p;
+        int ret = nums.size();
+        for(auto p: table){
+            if(p.second == max_pair.second){
+                int first = -1, last = -1;
+                int freq_count = 0;
+                for(int i = 0; freq_count < p.second; i++){
+                    if(nums[i] == p.first){
+                        if(first == -1)
+                            first = i;
+                        last = i;
+                        freq_count++;
+                    }
+                }
+                int interval = last - first + 1;
+                if(interval < ret)
+                    ret = interval;
+            }
+        }
+        return ret;
+    }
+
+    vector<vector<int>> generate(int numRows) {
+        auto ret = vector<vector<int>>(numRows);
+        if(numRows == 0)
+            return ret;
+        ret[0].push_back(1);
+        if(numRows == 1)
+            return ret;
+        ret[1].insert(ret[1].end(), 2, 1);
+        if(numRows == 2)
+            return ret;
+        for(int row = 2; row < numRows; row++){
+            ret[row].push_back(1);
+            for(int i = 1; i < row; i++)
+                ret[row].push_back(ret[row - 1][i - 1] + ret[row - 1][i]);
+            ret[row].push_back(1);
+        }
+        return ret;
+    }
 }
 
 
