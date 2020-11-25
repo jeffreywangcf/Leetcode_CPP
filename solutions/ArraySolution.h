@@ -620,6 +620,52 @@ namespace ArraySolution {
         }
         return ret;
     }
+
+    int findMaxConsecutiveOnes(vector<int>& nums) {
+        int max = 0, current = 0, index = 0;
+        while(index < nums.size()){
+            if(nums[index] == 1){
+                current = 1;
+                while((++index < nums.size()) && nums[index] == 1)
+                    current++;
+                if(current > max)
+                    max = current;
+            }else{
+                index++;
+            }
+        }
+        return max;
+    }
+
+    int findKthPositive(vector<int>& arr, int k) {
+        int index = 0, posNum = 0;
+        while(++posNum){
+            if(index < arr.size() && posNum == arr[index])
+                index++;
+            else{
+                if(--k == 0)
+                    return posNum;
+            }
+        }
+        return posNum;
+    }
+
+    string stringShift(string s, vector<vector<int>>& shift) {
+        int totalShift = 0;
+        string ret(s.size(), ' ');
+        for(auto sh: shift)
+            totalShift += sh[0] ? sh[1] : -sh[1];
+        if(totalShift == 0)
+            return s;
+        for(int i = 0; i < s.size(); i++){
+            int newIndex = (i + abs(totalShift)) % s.size();
+            if(totalShift > 0)
+                ret[newIndex] = s[i];
+            else
+                ret[i] = s[newIndex];
+        }
+        return ret;
+    }
 }
 
 
