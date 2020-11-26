@@ -666,6 +666,63 @@ namespace ArraySolution {
         }
         return ret;
     }
+
+    string tictactoe(vector<vector<int>>& moves) {
+        int rows[3] = {0}, cols[3] = {0};
+        int d1 = 0, d2 = 0;
+        bool isAPlaying = true;
+        for(auto move: moves){
+            int x = move[0], y = move[1];
+            if(isAPlaying){
+                rows[x]++;
+                cols[y]++;
+                if(x == y)
+                    d1++;
+                if(x == (2 - y))
+                    d2++;
+            }else{
+                rows[x]--;
+                cols[y]--;
+                if(x == y)
+                    d1--;
+                if(x == (2 - y))
+                    d2--;
+            }
+            if(rows[x] == 3 || cols[y] == 3 || d1 == 3 || d2 == 3)
+                return "A";
+            if(rows[x] == -3 || cols[y] == -3 || d1 == -3 || d2 == -3)
+                return "B";
+            isAPlaying = !isAPlaying;
+        }
+        if(moves.size() < 9)
+            return "Pending";
+        return "Draw";
+    }
+
+    void duplicateZeros(vector<int>& arr) {
+        auto ret = vector<int>();
+        int index = 0;
+        while(ret.size() <= arr.size()){
+            if(arr[index] != 0){
+                ret.push_back(arr[index++]);
+                continue;
+            }
+            ret.push_back(arr[index]);
+            ret.push_back(arr[index++]);
+        }
+        arr = vector<int>(ret.begin(), ret.begin() + arr.size());
+    }
+
+    vector<int> getRow(int rowIndex) {
+        vector<int> ret{1}, current{1};
+        for(int i = 1; i <= rowIndex; i++){
+            ret.push_back(1);
+            for(int j = 1; j < i; j++)
+                ret[j] = current[j] + current[j - 1];
+            current = ret;
+        }
+        return ret;
+    }
 }
 
 
