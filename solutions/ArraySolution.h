@@ -539,7 +539,7 @@ namespace ArraySolution {
         return true;
     }
 
-    int maxProfit(vector<int>& prices) {
+    int maxProfitII(vector<int>& prices) {
         int ret = 0;
         for(int i = 0; i < prices.size() - 1; i++)
             if(prices[i + 1] > prices[i])
@@ -722,6 +722,45 @@ namespace ArraySolution {
             current = ret;
         }
         return ret;
+    }
+
+    int maxProfitI(vector<int>& prices) {
+        int diff = 0, minVal = INT_MAX;
+        for(const auto &price : prices){
+            minVal = min(minVal, price);
+            diff = max(diff, price - minVal);
+        }
+        return diff;
+    }
+
+    int minCostClimbingStairs(vector<int>& cost) {
+        for(int i = 2; i < cost.size(); i++)
+            cost[i] += min(cost[i - 1], cost[i - 2]);
+        return min(cost[cost.size() - 1], cost[cost.size() - 2]);
+    }
+
+    vector<int> transformArray(vector<int>& arr) {
+        while(true){
+            bool change = false;
+            auto aux = vector<int>(arr.size());
+            aux[0] = arr[0];
+            aux[arr.size() - 1] = arr[arr.size() - 1];
+            for(int i = 1; i < arr.size() - 1; i++){
+                if(arr[i - 1] > arr[i] && arr[i] < arr[i + 1]){
+                    aux[i] = arr[i] + 1;
+                    change = true;
+                }else if(arr[i - 1] < arr[i] && arr[i] > arr[i + 1]){
+                    aux[i] = arr[i] - 1;
+                    change = true;
+                }else{
+                    aux[i] = arr[i];
+                }
+            }
+            arr = aux;
+            if(!change)
+                break;
+        }
+        return arr;
     }
 }
 
