@@ -762,6 +762,50 @@ namespace ArraySolution {
         }
         return arr;
     }
+
+    vector<vector<int>> largeGroupPositions(string s) {
+        auto ret = vector<vector<int>>();
+        int left = 0, right = 0;
+        while(right < s.size()){
+            left = right;
+            while(right + 1 < s.size() && s[right + 1] == s[left])
+                right++;
+            if(right - left > 2)
+                ret.push_back({left, right});
+        }
+        return ret;
+    }
+
+    bool canThreePartsEqualSum(vector<int>& A) {
+        auto sum = accumulate(A.begin(), A.end(), 0);
+        if(sum % 3 != 0)
+            return false;
+        int partSum = sum / 3, temp = 0, ret = 0;
+        for(auto a: A){
+            temp += a;
+            if(temp == partSum){
+                temp = 0;
+                ret++;
+            }
+        }
+        if(ret > 2)
+            return true;
+        return false;
+    }
+
+    int getMaximumGenerated(int n) {
+        if(n == 0)
+            return 0;
+        auto aux = vector<int>(n + 2, 0);
+        aux[1] = 1;
+        int max_num = 1;
+        for(int i = 1; i < (n + 1) / 2; i++){
+            aux[2 * i] = aux[i];
+            aux[2 * i + 1] = aux[i] + aux[i + 1];
+            max_num = max(max_num, max(aux[2 * i + 1], aux[2 * i]));
+        }
+        return max_num;
+    }
 }
 
 
