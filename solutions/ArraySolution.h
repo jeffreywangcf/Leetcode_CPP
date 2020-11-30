@@ -851,6 +851,55 @@ namespace ArraySolution {
         }
         return maxVal;
     }
+
+    int maximumProduct(vector<int>& nums) {
+        int min1 = INT_MAX, min2 = INT_MAX;
+        int max1 = INT_MIN, max2 = INT_MIN, max3 = INT_MIN;
+        for(auto num: nums){
+            if(num > max1){
+                max3 = max2;
+                max2 = max1;
+                max1 = num;
+            }else if(num > max2){
+                max3 = max2;
+                max2 = num;
+            }else if(num > max3){
+                max3 = num;
+            }
+            if(num < min1){
+                min2 = min1;
+                min1 = num;
+            }else if(num < min2){
+                min2 = num;
+            }
+        }
+        return max((max1 * max2 * max3), (min1 * min2 * max1));
+    }
+
+    int numEquivDominoPairs(vector<vector<int>>& dominoes) {
+        int ret = 0;
+        auto table = unordered_map<int, int>();
+        for(auto domino: dominoes){
+            int key = max(domino[0], domino[1]) * 10 + min(domino[1], domino[0]);
+            table[key]++;
+        }
+        for(auto pair: table)
+            if(pair.second > 1)
+                ret += (pair.second * (pair.second - 1)) / 2;
+        return ret;
+    }
+
+    int findLengthOfLCIS(vector<int>& nums) {
+        if(nums.size() < 2)
+            return nums.size();
+        int ret = 1, current = 1;
+        for(int i = 1; i < nums.size(); i++)
+            if(nums[i] > nums[i - 1])
+                ret = max(ret, ++current);
+            else
+                current = 1;
+        return ret;
+    }
 }
 
 
