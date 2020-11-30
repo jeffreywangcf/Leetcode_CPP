@@ -806,6 +806,51 @@ namespace ArraySolution {
         }
         return max_num;
     }
+
+    int numPairsDivisibleBy60(vector<int>& time) {
+        int ret = 0;
+        int table[60] = {0};
+        for(auto t: time){
+            auto rem = t % 60;
+            if(rem == 0)
+                ret += table[rem];
+            else
+                ret += table[60 - rem];
+            table[rem]++;
+        }
+        return ret;
+    }
+
+    vector<bool> prefixesDivBy5(vector<int>& A) {
+        //will overflow
+//        auto ret = vector<bool>(A.size());
+//        int val = 0;
+//        for(int i = 0; i < A.size(); i++){
+//            val = (val * 2) + A[i];
+//            ret[i] = val % 5 == 0;
+//        }
+//        return ret;
+
+        //https://leetcode.com/problems/binary-prefix-divisible-by-5/discuss/265601/Detailed-Explanation-using-Modular-Arithmetic-O(n)
+        auto ret = vector<bool>(A.size());
+        int val = 0;
+        for(int i = 0; i < A.size(); i++){
+            val = ((val * 2) + A[i]) % 5;
+            ret[i] = val == 0;
+        }
+        return ret;
+    }
+
+    int maxSubArray(vector<int>& nums) {
+        int maxVal = INT_MIN, sum = 0;
+        for(auto num: nums){
+            sum += num;
+            maxVal = max(maxVal, sum);
+            if(sum < 0)
+                sum = 0;
+        }
+        return maxVal;
+    }
 }
 
 
