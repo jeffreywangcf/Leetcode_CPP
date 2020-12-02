@@ -900,6 +900,47 @@ namespace ArraySolution {
                 current = 1;
         return ret;
     }
+
+    int pivotIndex(vector<int>& nums) {
+        auto sum = accumulate(nums.begin(), nums.end(), 0);
+        auto left = 0;
+        for(int i = 0; i < nums.size(); i++){
+            left += nums[i];
+            sum -= nums[i];
+            if(left == sum)
+                return i;
+        }
+        return -1;
+    }
+
+    vector<int> addToArrayForm(vector<int>& A, int K) {
+        for(int i = A.size() - 1; i >= 0 && K >= 0; i--){
+            A[i] += K;
+            K = A[i] / 10;
+            A[i] %= 10;
+        }
+        while(K > 0){
+            A.insert(A.begin(), K % 10);
+            K /= 10;
+        }
+        return A;
+    }
+
+    bool checkStraightLine(vector<vector<int>>& coordinates) {
+        if(coordinates.size() <= 2)
+            return true;
+        vector<int> slope = {coordinates[1][0] - coordinates[0][0],
+                     coordinates[1][1] - coordinates[0][1]
+        };
+        for(int i = 2; i < coordinates.size(); i++){
+            vector<int> diff = {coordinates[i][0] - coordinates[1][0],
+                         coordinates[i][1] - coordinates[1][1]
+            };
+            if(diff[0] * slope[1] != diff[1] * slope[0])
+                return false;
+        }
+        return true;
+    }
 }
 
 
