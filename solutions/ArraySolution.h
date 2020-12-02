@@ -941,6 +941,48 @@ namespace ArraySolution {
         }
         return true;
     }
+
+    vector<int> plusOne(vector<int>& digits) {
+        for(int i = digits.size() - 1; i >= 0; i--){
+            if(digits[i] == 9)
+                digits[i] = 0;
+            else{
+                digits[i]++;
+                return digits;
+            }
+        }
+        digits[0]++;
+        digits.push_back(0);
+        return digits;
+    }
+
+    int dominantIndex(vector<int>& nums) {
+        int firstMax = INT_MIN, secondMax = INT_MIN, index = -1;
+        for(int i = 0; i < nums.size(); i++){
+            if(nums[i] > firstMax){
+                secondMax = firstMax;
+                firstMax = nums[i];
+                index = i;
+            }else if(nums[i] > secondMax){
+                secondMax = nums[i];
+            }
+        }
+        if(firstMax / 2 >= secondMax)
+            return index;
+        return -1;
+    }
+
+    int searchInsert(vector<int>& nums, int target) {
+        int left = 0, right = nums.size();
+        while(left < right){
+            int mid = left + (right - left) / 2;
+            if(target > nums[mid])
+                left = mid + 1;
+            else
+                right = mid;
+        }
+        return left;
+    }
 }
 
 
