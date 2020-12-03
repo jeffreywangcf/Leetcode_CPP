@@ -64,10 +64,10 @@ RM = "/Users/jefferywangcf/Library/Application Support/JetBrains/Toolbox/apps/CL
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jefferywangcf/CLionProjects/leetcode_cpp
+CMAKE_SOURCE_DIR = /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jefferywangcf/CLionProjects/leetcode_cpp/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/leetcode_cpp.dir/clean
 CMakeFiles/leetcode_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/leetcode_cpp.dir/build.make CMakeFiles/leetcode_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/leetcode_cpp.dir/build.make CMakeFiles/leetcode_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jefferywangcf/CLionProjects/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target leetcode_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target leetcode_cpp"
 .PHONY : CMakeFiles/leetcode_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/leetcode_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jefferywangcf/CLionProjects/leetcode_cpp/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/leetcode_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jefferywangcf/CLionProjects/leetcode_cpp/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/leetcode_cpp.dir/rule
 
 # Convenience name for target.
