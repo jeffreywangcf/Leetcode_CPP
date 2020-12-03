@@ -63,10 +63,10 @@ RM = "/Users/jefferywangcf/Library/Application Support/JetBrains/Toolbox/apps/CL
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp
+CMAKE_SOURCE_DIR = /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/leetcode_cpp.dir/depend.make
@@ -79,29 +79,29 @@ include CMakeFiles/leetcode_cpp.dir/flags.make
 
 CMakeFiles/leetcode_cpp.dir/main.cpp.o: CMakeFiles/leetcode_cpp.dir/flags.make
 CMakeFiles/leetcode_cpp.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/leetcode_cpp.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leetcode_cpp.dir/main.cpp.o -c /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/leetcode_cpp.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leetcode_cpp.dir/main.cpp.o -c /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/main.cpp
 
 CMakeFiles/leetcode_cpp.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/leetcode_cpp.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/main.cpp > CMakeFiles/leetcode_cpp.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/main.cpp > CMakeFiles/leetcode_cpp.dir/main.cpp.i
 
 CMakeFiles/leetcode_cpp.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/leetcode_cpp.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/main.cpp -o CMakeFiles/leetcode_cpp.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/main.cpp -o CMakeFiles/leetcode_cpp.dir/main.cpp.s
 
 CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o: CMakeFiles/leetcode_cpp.dir/flags.make
 CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o: ../structures/List.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o -c /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o -c /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp
 
 CMakeFiles/leetcode_cpp.dir/structures/List.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/leetcode_cpp.dir/structures/List.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp > CMakeFiles/leetcode_cpp.dir/structures/List.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp > CMakeFiles/leetcode_cpp.dir/structures/List.cpp.i
 
 CMakeFiles/leetcode_cpp.dir/structures/List.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/leetcode_cpp.dir/structures/List.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp -o CMakeFiles/leetcode_cpp.dir/structures/List.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp -o CMakeFiles/leetcode_cpp.dir/structures/List.cpp.s
 
 # Object files for target leetcode_cpp
 leetcode_cpp_OBJECTS = \
@@ -115,7 +115,7 @@ leetcode_cpp: CMakeFiles/leetcode_cpp.dir/main.cpp.o
 leetcode_cpp: CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o
 leetcode_cpp: CMakeFiles/leetcode_cpp.dir/build.make
 leetcode_cpp: CMakeFiles/leetcode_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable leetcode_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable leetcode_cpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/leetcode_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/leetcode_cpp.dir/clean:
 .PHONY : CMakeFiles/leetcode_cpp.dir/clean
 
 CMakeFiles/leetcode_cpp.dir/depend:
-	cd /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug /Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/leetcode_cpp.dir/depend
 

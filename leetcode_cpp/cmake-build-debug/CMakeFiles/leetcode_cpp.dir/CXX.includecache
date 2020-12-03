@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/main.cpp
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/main.cpp
 iostream
 -
 util.h
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/util.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/util.h
 solutions/CommonSolution.h
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/solutions/CommonSolution.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/CommonSolution.h
 solutions/ArraySolution.h
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/solutions/ArraySolution.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/ArraySolution.h
 
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/solutions/ArraySolution.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/ArraySolution.h
 iostream
 -
 vector
@@ -38,7 +38,7 @@ queue
 numeric
 -
 
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/solutions/CommonSolution.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/CommonSolution.h
 iostream
 -
 vector
@@ -50,21 +50,21 @@ set
 map
 -
 
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/List.cpp
 List.h
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/List.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/List.h
 
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/List.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/List.h
 iostream
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/iostream
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/iostream
 vector
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/vector
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/vector
 set
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/set
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/set
 map
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/structures/map
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/map
 
-/Users/jefferywangcf/CLionProjects/LeetcodeSolution/leetcode_cpp/util.h
+/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/util.h
 iostream
 -
 vector
