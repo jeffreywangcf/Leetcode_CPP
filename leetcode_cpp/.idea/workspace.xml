@@ -31,16 +31,6 @@
   <component name="ChangeListManager">
     <list default="true" id="971af65f-c8e7-4cfa-90b9-a3e9a112bfc0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/leetcode_cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/leetcode_cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/ArraySolution.h" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/ArraySolution.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../leetcode_rust/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_rust/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -106,7 +96,7 @@
       <workItem from="1606976715831" duration="27000" />
       <workItem from="1606977254439" duration="18000" />
       <workItem from="1607259289660" duration="1092000" />
-      <workItem from="1607260640963" duration="2807000" />
+      <workItem from="1607260640963" duration="5844000" />
     </task>
     <servers />
   </component>
@@ -150,5 +140,9 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="469" y="188" key="SettingsEditor/0.25.1920.1055/1920.-566.1080.1895@0.25.1920.1055" timestamp="1607262971777" />
+    <state x="625" y="259" width="670" height="676" key="search.everywhere.popup" timestamp="1607264787670">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="625" y="259" width="670" height="676" key="search.everywhere.popup/0.25.1920.1055/1920.-566.1080.1895@0.25.1920.1055" timestamp="1607264787670" />
   </component>
 </project>

@@ -1023,6 +1023,37 @@ namespace ArraySolution {
         }
         return ret;
     }
+
+    bool checkIfExist(vector<int>& arr) {
+        if(count(arr.begin(), arr.end(), 0) > 1)
+            return true;
+        for(auto a: arr)
+            if(a && (find(arr.begin(), arr.end(), 2*a) != arr.end()))
+                return true;
+        return false;
+    }
+
+    bool hasGroupsSizeX(vector<int>& deck) {
+        auto table = unordered_map<int, int>();
+        int ret = 0;
+        for(auto d: deck)
+            table[d]++;
+        for(auto p: table)
+            ret = gcd(p.second, ret);
+        return ret > 1;
+    }
+
+    bool validMountainArray(vector<int>& arr) {
+        if(arr.size() < 3 || arr[0] >= arr[1])
+            return false;
+        bool ascending = true;
+        for(int i = 2; i < arr.size(); i++)
+            if(arr[i] < arr[i - 1])
+                ascending = false;
+            else if(arr[i] == arr[i - 1] || !ascending)
+                return false;
+        return !ascending;
+    }
 }
 
 
