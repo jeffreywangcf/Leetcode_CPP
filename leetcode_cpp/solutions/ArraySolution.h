@@ -983,6 +983,46 @@ namespace ArraySolution {
         }
         return left;
     }
+
+    bool containsPattern(vector<int>& arr, int m, int k) {
+        int count = 0;
+        for(int i = 0; i + m < arr.size(); i++){
+            if(arr[i] != arr[i + m]){
+                count = 0;
+                continue;
+            }
+            if(++count == (k - 1) * m)
+                return true;
+        }
+        return false;
+    }
+
+    double findMaxAverage(vector<int>& nums, int k) {
+        int i = 0, j = k - 1;
+        double sum = accumulate(nums.begin(), nums.begin() + k, 0);
+        double last = sum;
+        while(++j < nums.size()){
+            last = last - nums[i] + nums[j];
+            sum = max(sum, last);
+            i++;
+        }
+        return sum / k;
+    }
+
+    vector<string> summaryRanges(vector<int>& nums) {
+        auto ret = vector<string>();
+        int i = 0, j = 0;
+        while(j < nums.size()){
+            while(j + 1 < nums.size() && nums[j + 1] == nums[j] + 1)
+                j++;
+            if(j == i)
+                ret.push_back(to_string(nums[i]));
+            else
+                ret.push_back(to_string(nums[i]) + "->" + to_string(nums[j]));
+            i = ++j;
+        }
+        return ret;
+    }
 }
 
 
