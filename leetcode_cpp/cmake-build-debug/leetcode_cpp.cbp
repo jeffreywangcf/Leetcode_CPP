@@ -95,6 +95,9 @@
 		<Unit filename="/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/List.h">
 			<Option target="leetcode_cpp"/>
 		</Unit>
+		<Unit filename="/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/structures/SparseVector.h">
+			<Option target="leetcode_cpp"/>
+		</Unit>
 		<Unit filename="/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/util.h">
 			<Option target="leetcode_cpp"/>
 		</Unit>

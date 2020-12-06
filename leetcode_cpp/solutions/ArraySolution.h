@@ -1054,6 +1054,33 @@ namespace ArraySolution {
                 return false;
         return !ascending;
     }
+
+    bool canPlaceFlowers(vector<int>& flowerbed, int n) {
+        flowerbed.insert(flowerbed.begin(), 0);
+        flowerbed.insert(flowerbed.end(), 0);
+        for(int i = 1; i < flowerbed.size() - 1; i++){
+            if(flowerbed[i - 1] + flowerbed[i] + flowerbed[i + 1] == 0){
+                n--;
+                flowerbed[i] = 1;
+            }
+        }
+        return n <= 0;
+    }
+
+    bool checkPossibility(vector<int>& nums) {
+        int count = 0;
+        nums.insert(nums.begin(), 0);
+        for(int i = 2; i < nums.size(); i++){
+            if(nums[i] < nums[i - 1]){
+                count++;
+                if(nums[i - 2] <= nums[i])
+                    nums[i - 1] = nums[i];
+                else
+                    nums[i] = nums[i - 1];
+            }
+        }
+        return count <= 1;
+    }
 }
 
 

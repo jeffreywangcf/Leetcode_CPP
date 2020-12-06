@@ -31,6 +31,8 @@
   <component name="ChangeListManager">
     <list default="true" id="971af65f-c8e7-4cfa-90b9-a3e9a112bfc0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/leetcode_cpp.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/leetcode_cpp.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/ArraySolution.h" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/ArraySolution.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../leetcode_rust/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_rust/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -50,7 +52,9 @@
     <option name="directoryName" value="4sbdgmx2" />
   </component>
   <component name="ProjectId" id="1l8RQD9YFB2EolHW2vL6rGgmNZ4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -96,7 +100,7 @@
       <workItem from="1606976715831" duration="27000" />
       <workItem from="1606977254439" duration="18000" />
       <workItem from="1607259289660" duration="1092000" />
-      <workItem from="1607260640963" duration="5844000" />
+      <workItem from="1607260640963" duration="8916000" />
     </task>
     <servers />
   </component>
@@ -120,21 +124,25 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="424" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1055/1920.-566.1080.1895@0.25.1920.1055" timestamp="1607262864550" />
-    <state width="1920" height="289" key="GridCell.Tab.0.bottom" timestamp="1606977271894">
+    <state width="1920" height="289" key="GridCell.Tab.0.bottom" timestamp="1607273229551">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1920" height="289" key="GridCell.Tab.0.bottom/0.25.1920.1055/1920.-566.1080.1895@0.25.1920.1055" timestamp="1607273229551" />
     <state width="1920" height="289" key="GridCell.Tab.0.bottom/1920.-566.1080.1895/0.25.1920.1055@0.25.1920.1055" timestamp="1606977271894" />
-    <state width="1920" height="289" key="GridCell.Tab.0.center" timestamp="1606977271894">
+    <state width="1920" height="289" key="GridCell.Tab.0.center" timestamp="1607273229551">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1920" height="289" key="GridCell.Tab.0.center/0.25.1920.1055/1920.-566.1080.1895@0.25.1920.1055" timestamp="1607273229551" />
     <state width="1920" height="289" key="GridCell.Tab.0.center/1920.-566.1080.1895/0.25.1920.1055@0.25.1920.1055" timestamp="1606977271894" />
-    <state width="1920" height="289" key="GridCell.Tab.0.left" timestamp="1606977271893">
+    <state width="1920" height="289" key="GridCell.Tab.0.left" timestamp="1607273229551">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1920" height="289" key="GridCell.Tab.0.left/0.25.1920.1055/1920.-566.1080.1895@0.25.1920.1055" timestamp="1607273229551" />
     <state width="1920" height="289" key="GridCell.Tab.0.left/1920.-566.1080.1895/0.25.1920.1055@0.25.1920.1055" timestamp="1606977271893" />
-    <state width="1920" height="289" key="GridCell.Tab.0.right" timestamp="1606977271894">
+    <state width="1920" height="289" key="GridCell.Tab.0.right" timestamp="1607273229551">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1920" height="289" key="GridCell.Tab.0.right/0.25.1920.1055/1920.-566.1080.1895@0.25.1920.1055" timestamp="1607273229551" />
     <state width="1920" height="289" key="GridCell.Tab.0.right/1920.-566.1080.1895/0.25.1920.1055@0.25.1920.1055" timestamp="1606977271894" />
     <state x="469" y="188" key="SettingsEditor" timestamp="1607262971777">
       <screen x="0" y="25" width="1920" height="1055" />
