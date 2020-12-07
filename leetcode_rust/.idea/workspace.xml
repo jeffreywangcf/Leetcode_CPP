@@ -23,22 +23,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bed36166-5521-46b6-ba42-78c9924cfd64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../leetcode_cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/leetcode_cpp.dir/structures/List.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/leetcode_cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/leetcode_cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/leetcode_cpp.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/leetcode_cpp.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/solutions/ArraySolution.h" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/solutions/ArraySolution.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +118,7 @@
       <workItem from="1606976909804" duration="21000" />
       <workItem from="1606976958017" duration="49000" />
       <workItem from="1606977273545" duration="4000" />
+      <workItem from="1607260571357" duration="69000" />
     </task>
     <servers />
   </component>
