@@ -37,6 +37,8 @@ queue
 -
 numeric
 -
+list
+-
 
 /Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/CommonSolution.h
 iostream

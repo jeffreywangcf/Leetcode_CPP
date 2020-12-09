@@ -19,6 +19,7 @@
 #include <unordered_map>
 #include <queue>
 #include <numeric>
+#include <list>
 
 using namespace std;
 
@@ -1080,6 +1081,56 @@ namespace ArraySolution {
             }
         }
         return count <= 1;
+    }
+
+    int numTeams(vector<int>& rating) {
+        int ret = 0;
+        for(int j = 1; j < rating.size() - 1; j++){
+            int leftSmall = 0, rightSmall = 0;
+            int leftLarge = 0, rightLarge = 0;
+            for(int i = 0; i < j; i++)
+                if(rating[i] < rating[j])
+                    leftSmall++;
+                else if(rating[i] > rating[j])
+                    leftLarge++;
+            for(int k = j + 1; k < rating.size(); k++)
+                if(rating[j] < rating[k])
+                    rightLarge++;
+                else if(rating[j] > rating[k])
+                    rightSmall++;
+            ret += leftSmall * rightLarge + leftLarge * rightSmall;
+        }
+        return ret;
+    }
+
+    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {
+        int m = mat.size(), n = mat[0].size();
+        auto table = unordered_map<int, priority_queue<int>>();
+        for(int i = 0; i < m; i++)
+            for(int j = 0; j < n; j++)
+                table[i - j].push(mat[i][j]);
+        for(int i = m - 1; i >= 0; i--){
+            for(int j = n - 1; j >= 0; j--){
+                mat[i][j] = table[i - j].top();
+                table[i - j].pop();
+            }
+        }
+        return mat;
+    }
+
+    vector<int> deckRevealedIncreasing(vector<int>& deck) {
+        sort(deck.begin(), deck.end());
+        auto deq = deque<int>();
+        deq.push_front(deck.back());
+        deck.pop_back();
+        while(!deck.empty()){
+            int temp = deq.back();
+            deq.pop_back();
+            deq.push_front(temp);
+            deq.push_front(deck.back());
+            deck.pop_back();
+        }
+        return vector<int>(deq.begin(), deq.end());
     }
 }
 

@@ -22,10 +22,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bed36166-5521-46b6-ba42-78c9924cfd64" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../leetcode_python/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../leetcode_cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode_cpp/solutions/ArraySolution.h" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_cpp/solutions/ArraySolution.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode_python/solutions/array_solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode_python/solutions/array_solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +118,7 @@
       <workItem from="1606976958017" duration="49000" />
       <workItem from="1606977273545" duration="4000" />
       <workItem from="1607260571357" duration="69000" />
+      <workItem from="1607438547923" duration="13000" />
     </task>
     <servers />
   </component>
