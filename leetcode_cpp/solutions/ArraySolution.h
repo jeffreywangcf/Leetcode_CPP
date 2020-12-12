@@ -1132,6 +1132,107 @@ namespace ArraySolution {
         }
         return vector<int>(deq.begin(), deq.end());
     }
+
+    vector<vector<int>> candyCrush(vector<vector<int>>& board) {
+        int m = board.size(), n = board[0].size();
+        bool flag = false;
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n - 2; j++){
+                int a = abs(board[i][j]), b = abs(board[i][j + 1]), c = abs(board[i][j + 2]);
+                if(a == b && b == c && a != 0){
+                    board[i][j] = board[i][j + 1] = board[i][j + 2] = -a;
+                    flag = true;
+                }
+            }
+        }
+        for(int i = 0; i < m - 2; i++){
+            for(int j = 0; j < n; j++){
+                int a = abs(board[i][j]), b = abs(board[i + 1][j]), c = abs(board[i + 2][j]);
+                if(a == b && b == c && a != 0){
+                    board[i][j] = board[i][j + 1] = board[i][j + 2] = -a;
+                    flag = true;
+                }
+            }
+        }
+        for(int j = 0; j < n - 2; j++){
+            int fall = m - 1;
+            for(int i = m - 1; i >= 0; i--)
+                if(board[i][j] > 0)
+                    board[fall--][j] = board[i][j];
+            while(fall >= 0)
+                board[fall--][j] = 0;
+        }
+        return flag ? candyCrush(board) : board;
+    }
+
+    vector<vector<int>> queensAttacktheKing(vector<vector<int>>& queens, vector<int>& king) {
+        auto ret = vector<vector<int>>();
+        vector<vector<bool>> table(8, vector<bool>(8, false));
+        for(auto queen: queens)
+            table[queen[0]][queen[1]] = true;
+
+        for(int i = king[0] - 1; i >= 0; i--){  //top
+            if (table[i][king[1]]){
+                ret.push_back({i, king[1]});
+                break;
+            }
+        }
+        for(int i = king[0] + 1; i < 8; i++){  //bottom
+            if (table[i][king[1]]){
+                ret.push_back({i, king[1]});
+                break;
+            }
+        }
+        for(int j = king[1] - 1; j >= 0; j--){  //left
+            if (table[king[0]][j]){
+                ret.push_back({king[0], j});
+                break;
+            }
+        }
+        for(int j = king[1] + 1; j < 8; j++){  //right
+            if (table[king[0]][j]){
+                ret.push_back({king[0], j});
+                break;
+            }
+        }
+        for(int i = king[0] - 1, j = king[1] - 1; i >= 0 && j >= 0; i--, j--){  //top left
+            if (table[i][j]){
+                ret.push_back({i, j});
+                break;
+            }
+        }
+        for(int i = king[0] - 1, j = king[1] + 1; i >= 0 && j < 8; i--, j++){  //top right
+            if (table[i][j]){
+                ret.push_back({i, j});
+                break;
+            }
+        }
+        for(int i = king[0] + 1, j = king[1] - 1; i < 8 && j >= 0; i++, j--){  //bottom left
+            if (table[i][j]){
+                ret.push_back({i, j});
+                break;
+            }
+        }
+        for(int i = king[0] + 1, j = king[1] + 1; i < 8 && j < 8; i++, j++){  //bottom right
+            if (table[i][j]){
+                ret.push_back({i, j});
+                break;
+            }
+        }
+
+        return ret;
+    }
+
+    vector<int> findDuplicates(vector<int>& nums) {
+        auto ret = vector<int>();
+        for(int i = 0; i < nums.size(); i++){
+            int index = abs(nums[i]) - 1;
+            nums[index] = -nums[index];
+            if(nums[index] > 0)
+                ret.push_back(index + 1);
+        }
+        return ret;
+    }
 }
 
 
