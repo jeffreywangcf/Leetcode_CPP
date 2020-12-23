@@ -1233,6 +1233,59 @@ namespace ArraySolution {
         }
         return ret;
     }
+
+    int minSetSize(vector<int>& arr) {
+        auto table = unordered_map<int, int>();
+        for(auto a: arr)
+            table[a]++;
+        auto pq = priority_queue<pair<int, int>>();
+        for(auto p: table)
+            pq.push(pair<int, int>(p.second, p.first));
+        int c = 0, ret = 0;
+        while(c < arr.size() / 2){
+            ret++;
+            c += pq.top().first;
+            pq.pop();
+        }
+        return ret;
+    }
+
+    int numOfSubarrays(vector<int>& arr, int k, int threshold) {
+        int lower = 0, upper = k - 1, ret = 0;
+        int sum = accumulate(arr.begin(), arr.begin() + k, 0);
+        while(true){
+            if(sum / k >= threshold)
+                ret++;
+            sum -= arr[lower];
+            lower++;
+            upper++;
+            if(upper >= arr.size())
+                break;
+            sum += arr[upper];
+        }
+        return ret;
+    }
+
+    void wiggleSort(vector<int>& nums) {
+        if(nums.size() <= 1)
+            return;
+        for(int i = 1; i < nums.size(); i += 2){
+            if(nums[i - 1] > nums[i])
+                swap(nums[i - 1], nums[i]);
+            if(i + 1 < nums.size() && nums[i + 1] > nums[i])
+                swap(nums[i + 1], nums[i]);
+        }
+    }
+
+    int numTimesAllBlue(vector<int>& light) {
+        int ret = 0, rightest = -1;
+        for(int i = 0; i < light.size(); i++){
+            rightest = max(rightest, light[i]);
+            if(rightest == i + 1)
+                ret++;
+        }
+        return ret;
+    }
 }
 
 

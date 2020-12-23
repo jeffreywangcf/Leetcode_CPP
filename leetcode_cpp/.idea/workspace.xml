@@ -70,9 +70,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="leetcode_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetcode_cpp" TARGET_NAME="leetcode_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="leetcode_cpp" RUN_TARGET_NAME="leetcode_cpp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -91,6 +101,8 @@
       <workItem from="1607349945165" duration="33000" />
       <workItem from="1607513431636" duration="7064000" />
       <workItem from="1607610957663" duration="6199000" />
+      <workItem from="1607878753772" duration="1316000" />
+      <workItem from="1608580738762" duration="1687000" />
     </task>
     <servers />
   </component>
