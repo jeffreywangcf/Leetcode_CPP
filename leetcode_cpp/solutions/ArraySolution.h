@@ -1286,6 +1286,10 @@ namespace ArraySolution {
         }
         return ret;
     }
+
+    vector<int> getModifiedArray(int length, vector<vector<int>>& updates) {
+
+    }
 }
 
 
