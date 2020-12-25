@@ -1288,7 +1288,48 @@ namespace ArraySolution {
     }
 
     vector<int> getModifiedArray(int length, vector<vector<int>>& updates) {
+        vector<int> ret(length + 1, 0);
+        for(auto update: updates){
+            ret[update[0]] += update[2];
+            ret[update[1] + 1] += -update[2];
+        }
+        int val = 0;
+        for(int i = 0; i < length; i++){
+            val = val + ret[i];
+            ret[i] = val;
+        }
+        ret.pop_back();
+        return ret;
+    }
 
+    int rangeSum(vector<int>& nums, int n, int left, int right) {
+        auto sums = vector<int>();
+        for(int i = 0; i < n; i++){
+            int sum = 0;
+            for(int j = i; j < n; j++){
+                sum += nums[j];
+                sums.push_back(sum);
+            }
+        }
+        sort(sums.begin(), sums.end());
+        int ret = 0;
+        for(int i = left; i <= right; i++)
+            ret += sums[i];
+        return ret;
+    }
+
+    vector<int> productExceptSelf(vector<int>& nums) {
+        int frontProduct = 1, endProduct = 1;
+        vector<int> ret(nums.size(), 1);
+        for(int i = 0; i < nums.size(); i++){
+            ret[i] *= frontProduct;
+            frontProduct *= nums[i];
+        }
+        for(int i = nums.size() - 1; i >= 0; i--){
+            ret[i] *= endProduct;
+            endProduct *= nums[i];
+        }
+        return ret;
     }
 }
 
