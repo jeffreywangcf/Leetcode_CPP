@@ -1331,6 +1331,28 @@ namespace ArraySolution {
         }
         return ret;
     }
+
+    void rotate(vector<vector<int>>& matrix) {
+        for(int i = 0; i < matrix.size(); i++)
+            for(int j = i; j < matrix[i].size(); j++)
+                swap(matrix[i][j], matrix[j][i]);
+        for(auto &line: matrix)
+            reverse(line.begin(), line.end());
+    }
+
+    int maxSumTwoNoOverlap(vector<int>& A, int L, int M) {
+        int sums[1001] = {0};
+        for(int i = 0; i < A.size(); i++)
+            sums[i + 1] = sums[i] + A[i];
+        int lmax = 0, mmax = 0, ret = 0;
+        for(int i = L + M; i <= A.size(); i++){
+            lmax = max(lmax, sums[i - M] - sums[i - M - L]);
+            mmax = max(mmax, sums[i - L] - sums[i - M - L]);
+            ret = max(ret, lmax + sums[i] - sums[i - M]);
+            ret = max(ret, mmax + sums[i] - sums[i - L]);
+        }
+        return ret;
+    }
 }
 
 
