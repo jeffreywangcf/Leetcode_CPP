@@ -548,16 +548,16 @@ namespace ArraySolution {
         return ret;
     }
 
-    vector<int> arrayRankTransform(vector<int>& arr) {
-        auto table = unordered_map<int, int>();
-        set<int> sorted(arr.begin(), arr.end());
-        int rank = 1;
-        for(auto num: sorted)
-            table[num] = rank++;
-        for(auto &a: arr)
-            a = table[a];
-        return arr;
-    }
+    // vector<int> arrayRankTransform(vector<int>& arr) {
+    //     auto table = unordered_map<int, int>();
+    //     set<int> sorted(arr.begin(), arr.end());
+    //     int rank = 1;
+    //     for(auto num: sorted)
+    //         table[num] = rank++;
+    //     for(auto &a: arr)
+    //         a = table[a];
+    //     return arr;
+    // }
 
     int distanceBetweenBusStops(vector<int>& distance, int start, int destination) {
         int cw = 0, ccw = 0, cw_index = start, ccw_index = start;
