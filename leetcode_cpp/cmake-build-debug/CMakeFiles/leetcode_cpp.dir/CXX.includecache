@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/main.cpp
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/main.cpp
 iostream
 -
 util.h
-/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/util.h
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/util.h
 solutions/CommonSolution.h
-/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/CommonSolution.h
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/solutions/CommonSolution.h
 solutions/ArraySolution.h
-/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/ArraySolution.h
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/solutions/ArraySolution.h
 
-/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/ArraySolution.h
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/solutions/ArraySolution.h
 iostream
 -
 vector
@@ -40,7 +40,7 @@ numeric
 list
 -
 
-/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/solutions/CommonSolution.h
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/solutions/CommonSolution.h
 iostream
 -
 vector
@@ -52,7 +52,7 @@ set
 map
 -
 
-/Users/jefferywangcf/CommonProjects/LeetcodeSolution/leetcode_cpp/util.h
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/util.h
 iostream
 -
 vector
