@@ -1376,6 +1376,27 @@ namespace ArraySolution {
         _combinationSum(candidates, target, index, current, ret);
         return ret;
     }
+
+    int longestSubarray(vector<int>& nums) {
+        if(nums.size() < 2)
+            return 0;
+        int current = 0;
+        auto counts = vector<int>();
+        for(int i = 0; i < nums.size(); i++){
+            if(nums[i] == 1)
+                current++;
+            if(nums[i] == 0 || i == nums.size() - 1){
+                counts.push_back(current);
+                current = 0;
+            }
+        }
+        if(counts.size() == 1)
+            return counts[0] - 1;
+        int ret = 0;
+        for(int i = 0; i < counts.size() - 1; i++)
+            ret = max(ret, counts[i] + counts[i + 1]);
+        return ret;
+    }
 }
 
 
