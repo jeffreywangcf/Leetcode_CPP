@@ -1397,6 +1397,56 @@ namespace ArraySolution {
             ret = max(ret, counts[i] + counts[i + 1]);
         return ret;
     }
+
+    int _countLivingRelatives(int row, int col, vector<vector<int>> &board){
+        int count = 0;
+        auto width = static_cast<int>(board[0].size()) - 1;
+        auto height = static_cast<int>(board.size()) - 1;
+        if(col > 0 && board[row][col - 1] > 0)
+            count++;
+        if(col < width && board[row][col + 1] > 0)
+            count++;
+        if(row > 0){
+            if(board[row - 1][col] > 0)
+                count++;
+            if(col > 0 && board[row - 1][col - 1] > 0)
+                count++;
+            if(col < width && board[row - 1][col + 1] > 0)
+                count++;
+        }
+        if(row < height){
+            if(board[row + 1][col] > 0)
+                count++;
+            if(col > 0 && board[row + 1][col - 1] > 0)
+                count++;
+            if(col < width && board[row + 1][col + 1] > 0)
+                count++;
+        }
+        return count;
+    }
+
+    void gameOfLife(vector<vector<int>>& board) {
+        for(int i = 0; i < board.size(); i++){
+            for(int j = 0; j < board[0].size(); j++){
+                auto count = _countLivingRelatives(i, j, board);
+                if(board[i][j] == 1){
+                    if(count < 2 || count > 3)
+                        board[i][j] = 2;  //set to 2 for in place
+                }else if(board[i][j] == 0){
+                    if(count == 3)
+                        board[i][j] = -1;
+                }
+            }
+        }
+        for(int i = 0; i < board.size(); i++){
+            for(int j = 0; j < board[0].size(); j++){
+                if(board[i][j] == 2)
+                    board[i][j] = 0;
+                if(board[i][j] == -1)
+                    board[i][j] = 1;
+            }
+        }
+    }
 }
 
 
