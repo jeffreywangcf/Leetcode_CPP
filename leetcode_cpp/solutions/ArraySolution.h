@@ -1447,6 +1447,50 @@ namespace ArraySolution {
             }
         }
     }
+
+    int countServers(vector<vector<int>>& grid) {
+        vector<int> rows(grid.size(), 0);
+        vector<int> cols(grid[0].size(), 0);
+        for(int i = 0; i < rows.size(); i++){
+            for(int j = 0; j < cols.size(); j++){
+                if(grid[i][j]){
+                    rows[i]++;
+                    cols[j]++;
+                }
+            }
+        }
+        int count = 0;
+        for(int i = 0; i < rows.size(); i++)
+            for(int j = 0; j < cols.size(); j++)
+                if(grid[i][j] == 1 && (rows[i] > 1 || cols[j] > 1))
+                    count++;
+        return count;
+    }
+
+    vector<vector<int>> generateMatrix(int n) {
+        vector<vector<int>> ret(n, vector<int>(n, 0));
+        int layer = 0, count = 1;
+        while(count <= n * n){
+            //walk left to right
+            int i = layer;
+            while(i < n - layer)
+                ret[layer][i++] = count++;
+            //walk top to bottom
+            i = layer + 1;
+            while(i < n - layer)
+                ret[i++][n - layer - 1] = count++;  //n - 1, n - 2, ...
+            //walk bottom to left
+            i = n - layer - 2;
+            while(i > layer)
+                ret[n - layer - 1][i--] = count++;  //n - 1, n - 2, ...
+            //walk bottom to top
+            i = n - layer - 1;
+            while(i > layer)
+                ret[i--][layer] = count++;
+            layer++;
+        }
+        return ret;
+    }
 }
 
 
