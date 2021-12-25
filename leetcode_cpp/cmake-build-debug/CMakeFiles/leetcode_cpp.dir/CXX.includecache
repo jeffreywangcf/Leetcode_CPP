@@ -52,6 +52,20 @@ set
 map
 -
 
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/structures/List.cpp
+List.h
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/structures/List.h
+
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/structures/List.h
+iostream
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/structures/iostream
+vector
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/structures/vector
+set
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/structures/set
+map
+/Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/structures/map
+
 /Users/jefferywangcf/CommonProjects/leetcode-solutions/leetcode_cpp/util.h
 iostream
 -
